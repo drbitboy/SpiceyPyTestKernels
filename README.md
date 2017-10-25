@@ -16,6 +16,7 @@ Support unit testing in clones of the
     99f1f5a1900afc536354306419dc119b  cas_v40.tf
     8c16afc3bd886326e852b54bd71cc751  cpck05Mar2004.tpc
     b010eb485bd01da5b651c58a6c8f8e67  de405s_bigendian.bsp
+    6870f7bd98ff45afcf61dbb993a98650  de405s.bsp
     affa1da5adeee5ea4b0d7da54e4b69d7  earth_031228_231229_predict.bpc
     a37d8d5e3023f0df7ead0e6b40d6a5b6  earthstns_itrf93_050714.bsp
     fbde06c5abc5da969db984bb4ce5e6e0  earth_topo_050714.tf
