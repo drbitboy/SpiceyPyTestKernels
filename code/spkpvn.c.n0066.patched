@@ -60,7 +60,6 @@ static integer c__198 = 198;
 	    integer *, ftnlen);
     extern logical return_(void);
 
-
 /* $ Abstract */
 
 /*     Return the state (position and velocity) of a target body */
@@ -500,16 +499,10 @@ static integer c__198 = 198;
 	chkout_("SPKPVN", (ftnlen)6);
 	return 0;
     }
-
-
     {
-    extern btclogspkpvn_ ( integer     * handle
-                         , doublereal  * descr
-                         , doublereal  * et
-                         );
+    extern btclogspkpvn_ (integer*, doublereal*, doublereal*);
         btclogspkpvn_ ( handle, descr, et);
     }
-
     chkout_("SPKPVN", (ftnlen)6);
     return 0;
 } /* spkpvn_ */

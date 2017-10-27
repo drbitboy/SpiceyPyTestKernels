@@ -1,15 +1,15 @@
 
 N00NN=n0066
 FINAL_C=spkpvn.c
-ORIGINAL=$(FINAL_C).$(N00NN).original
+ORIGINAL=$(FINAL_C:%=%.$(N00NN).original)
 PATCHFILE=$(ORIGINAL:%.$(N00NN).original=%.patch)
 
 all: $(FINAL_C)
 
-$(FINAL_C): $(ORIGINAL) $(PATCHFILE)
+%.c: %.c.n0066.original %.c.patch
 	$(RM) $@
-	cp $(ORIGINAL) $@
-	patch $@ $(PATCHFILE)
+	cp $< $@
+	patch $@ $@.patch
 
 clean:
 	$(RM) $(FINAL_C)
