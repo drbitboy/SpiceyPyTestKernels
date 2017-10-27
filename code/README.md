@@ -14,7 +14,8 @@ To use these files:
 
 ```bash
 cd .../SpicePyTestKernels/code/
-cp btclogspkpvn.c spkpvn.c.n0066.patched .../SpiceyPy/cspice/src/spice/
+cp btclogspkpvn.c .../SpiceyPy/cspice/src/spice/btclogspkpvn.c
+cp spkpvn.c.n0066.patched .../SpiceyPy/cspice/src/spice/spkpvn.c
 ```
 
 2. Build patched source and log source in CSPICE and add to CSPICE library:
@@ -45,10 +46,7 @@ BTC_LOG_SPKPVN=spkpvn_log.txt python setup.py test
 
 ```bash
 cd .../SpiceyPyTestKernels/
-cp .../SpiceyPy/spkpvn_log.txt ./
-python code/sumpvn.py spkpvn
-BTC_LOG_SPKPVN=spkpvn_log.txt python setup.py test
-sort -u -k1,1 -k2,2n -k3,3n -u spkpvn_log.txt > sort-u_spkpvn_log.txt
+sort -u -k1,1 -k2,2n -k3,3n -u .../SpiceyPy/spkpvn_log.txt > sort-u_spkpvn_log.txt
 python sumpvn.py sort-u_spkpvn_log.txt > allspk.spkmerge
 rm -f allspk.bsp
 spkmerge allspk.spkmerge
