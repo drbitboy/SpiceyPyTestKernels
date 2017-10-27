@@ -23,7 +23,7 @@ cp spkpvn.c.n0066.patched .../SpiceyPy/cspice/src/spice/spkpvn.c
 ```bash
 cd .../SpiceyPy/cspice/src/cspice/
 gcc -c -ansi -m64 -O2 -fPIC -DNON_UNIX_STDIO btclogspkpvn.c spkpvn.c 
-ar rv ../../lib/cspice.a *.o
+ar rv ../../lib/cspice.a btclogspkpvn.o spkpvn.o
 ranlib ../../lib/cspice.a 
 ```
 
